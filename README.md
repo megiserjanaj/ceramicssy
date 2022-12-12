@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Ceramicssy site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This site is the Ceramicssy site, built on [React](https://reactjs.org/).
 
-## Available Scripts
+The site **must meet WCAG 2.1 AA accessibility standards**.
 
-In the project directory, you can run:
+# Requirements
 
-### `npm start`
+- Node v14.0 or higher (14.16.1 is optimal).
+- React.js ^18.2.0.
+- Project is built with React.js and Firebase.
+- Deployment is done by surge.sh.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To install the project, run the npm script:
 
-### `npm test`
+```bash
+$ npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Setup / Configuration
 
-### `npm run build`
+## Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When installing the React boilerplate, ensure your `package.json` has the required packages in the `dependencies` section.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+$ npm run deploy
+```
 
-### `npm run eject`
+## Staging
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Merge to `main`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Production
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Merge to `main`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Scripts
 
-## Learn More
+Add the following commands to the scripts section of your package.json file
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```json
+   "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Build
 
-### Code Splitting
+To build the project, run the npm script:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+$ npm run build
+```
 
-### Analyzing the Bundle Size
+This will build the files for testing and deployment. You'll find the built version of the project in the `/build` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Deployment
 
-### Making a Progressive Web App
+## Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To run the project locally, run the npm script:
 
-### Advanced Configuration
+```bash
+$ npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Navigate to `http://localhost:8000/` to view the site
 
-### Deployment
+## Supported Devices/Browsers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| OS           | Device          | Browser          |
+| :----------- | :-------------- | :--------------- |
+| Windows 10   | Desktop         | Chrome (latest)  |
+| Windows 10   | Desktop         | Firefox (latest) |
+| Windows 10   | Desktop         | Edge (latest)    |
+| OSX Big Sur  | Desktop         | Safari (latest)  |
+| iOS (latest) | iPhone 7        | Safari           |
+| iOS (latest) | iPhone X        | Safari           |
+| iOS (latest) | iPhone 11       | Safari           |
+| iOS (latest) | iPad Air 2 9.7" | Safari           |
+| iOS (latest) | iPad Pro 10.5"  | Safari           |
+| iOS (latest) | iPad Pro 12.9"  | Safari           |
+| Android 8    | Galaxy S7       | Chrome (latest)  |
+| Android 8    | Galaxy S9       | Chrome (latest)  |

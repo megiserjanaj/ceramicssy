@@ -1,0 +1,28 @@
+.error {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 8rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: "-apple-system, Roboto, sans-serif, serif";
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+
+  a {
+    color: "#cf1616";
+    font-weight: "600";
+    text-decoration: "none";
+  }
+}
