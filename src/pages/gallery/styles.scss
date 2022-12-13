@@ -1,5 +1,4 @@
 .page--gallery {
-  margin-bottom: 2rem;
   h2 {
     &::after {
       border: 3px solid rgba(6, 12, 63, 0.705);
@@ -72,9 +71,5 @@
       height: 100%;
       object-fit: cover;
     }
-  }
-
-  @media screen and (min-width: 1024px) {
-    margin-bottom: 4rem;
   }
 }

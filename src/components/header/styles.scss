@@ -26,11 +26,11 @@
   }
 
   &--desktop {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    margin-right: 2rem;
+    padding: 1rem;
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     background: transparent;
 
@@ -52,11 +52,10 @@
               &::before {
                 content: "";
                 position: absolute;
-                top: 2.5rem;
+                top: 3.5rem;
                 width: 60px;
-                color: #cf1616;
-                border: 1.5px solid #cf1616;
-                background: #cf1616;
+                border: 1px solid #000;
+                background: #000;
               }
             }
           }
@@ -66,9 +65,7 @@
   }
 
   &--mobile {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -135,7 +132,7 @@
               bottom: -0.5rem;
               right: 0;
               width: 65px;
-              border: 1px solid #cf1616;
+              border: 1px solid #000;
               border-radius: 5px;
             }
           }

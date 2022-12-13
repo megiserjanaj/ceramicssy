@@ -1,4 +1,5 @@
 import "./styles.scss";
+import { useEffect } from "react";
 import image1 from "../../media/images/image1.jpg";
 import image2 from "../../media/images/image2.jpg";
 import image3 from "../../media/images/image3.jpg";
@@ -10,6 +11,10 @@ import image10 from "../../media/images/image10.jpg";
 import image11 from "../../media/images/image11.jpg";
 
 const Gallery = () => {
+  useEffect(() => {
+    document.title = "Gallery";
+  }, []);
+
   return (
     <div className="page--gallery">
       <h2>Gallery</h2>

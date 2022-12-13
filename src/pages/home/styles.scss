@@ -6,7 +6,7 @@
     &::before {
       content: "";
       position: absolute;
-      background: rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0 0 0 2000px rgba(15, 15, 15, 0.35);
       border-radius: 5px;
       top: 0;
       right: 0;
@@ -16,113 +16,32 @@
       height: 36%;
 
       @media screen and (max-width: 500px) {
-        height: 18%;
+        height: 13.25%;
       }
 
       @media screen and (min-width: 620px) and (max-width: 800px) {
-        height: 17.75%;
+        height: 20.25%;
       }
 
       @media screen and (min-width: 900px) and (max-width: 1024px) {
-        height: 22.3%;
+        height: 25.35%;
       }
 
       @media screen and (min-width: 1100px) and (max-width: 1300px) {
-        height: 26.3%;
+        height: 30%;
       }
 
       @media screen and (min-width: 1400px) and (max-width: 1600px) {
-        height: 33.5%;
+        height: 32.25%;
       }
 
       @media screen and (min-width: 1800px) and (max-width: 2000px) {
-        height: 34.9%;
+        height: 39%;
       }
     }
 
     video {
       width: 100%;
-    }
-  }
-
-  /* Homepage navbar */
-
-  &--sections--nav {
-    position: absolute;
-    top: 1rem;
-    right: 0;
-
-    .header--navigation {
-      &--desktop {
-        ul {
-          display: flex;
-          justify-content: flex-end;
-          li {
-            margin: 0 2rem;
-            position: relative;
-            list-style-type: none;
-            color: #fff;
-            font-size: 1rem;
-            font-family: "Poppins", sans-serif;
-            cursor: pointer;
-
-            &:hover,
-            &:active,
-            &:focus {
-              &::after {
-                content: "";
-                margin: 0 auto;
-                position: absolute;
-                bottom: -0.5rem;
-                right: 0;
-                width: 65px;
-                border: 1px solid #fff;
-                border-radius: 5px;
-              }
-            }
-          }
-        }
-      }
-
-      &--mobile {
-        nav {
-          .toggler {
-            position: absolute;
-            top: 1rem;
-            right: 2rem;
-            img {
-              width: 20px;
-            }
-          }
-
-          ul {
-            li {
-              a {
-                color: #fff;
-                text-decoration: none;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    @media screen and (max-width: 500px) {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 210.5px;
-      background-color: rgba(0, 0, 0, 0.8);
-
-      ul {
-        margin-top: 2rem;
-        text-align: center;
-
-        li {
-          list-style-type: none;
-          line-height: 2rem;
-        }
-      }
     }
   }
 
@@ -134,27 +53,21 @@
     transform: translate(-50%, -50%);
     color: #fff;
     font-size: 6rem;
+    font-weight: 700;
     letter-spacing: 10px;
-    font-weight: 400;
+    text-shadow: 5px 5px 10px #5a5a5a;
 
-    @media screen and (max-width: 900px) {
-      display: none;
+    @media screen and (max-width: 500px) {
+      top: 7%;
+      font-size: 2rem;
     }
 
-    @media screen and (min-width: 500px) and (max-width: 800px) {
-      font-size: 3rem;
-      left: 40%;
-    }
-
-    @media screen and (max-width: 1024px) {
+    @media screen and (min-width: 500px) and (max-width: 1024px) {
       top: 10%;
+      font-size: 3rem;
     }
 
-    @media screen and (min-width: 1100px) and (max-width: 1300px) {
-      top: 13%;
-    }
-
-    @media screen and (min-width: 1400px) and (max-width: 1600px) {
+    @media screen and (min-width: 1400px) {
       top: 15%;
     }
 
@@ -167,14 +80,13 @@
 
   .section {
     width: 100%;
-    background: url("https://images-cdn.auctionmobility.com/is3/auctionmobility-static/2fs7-1-48OXP//1147_1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     &--about,
     &--contact {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.6);
       .card {
         align-items: flex-end;
         .copy {
@@ -191,7 +103,7 @@
       }
     }
     &--gallery {
-      background-color: rgba(255, 255, 255, 0.88);
+      background-color: rgba(255, 255, 255, 0.4);
       .link {
         a {
           color: #000;

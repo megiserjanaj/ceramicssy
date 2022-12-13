@@ -1,7 +1,12 @@
 import "./styles.scss";
+import { useEffect } from "react";
 import image6 from "../../media/images/image6.jpg";
 
 const About = () => {
+  useEffect(() => {
+    document.title = "About";
+  }, []);
+
   return (
     <div className="page--about">
       <div className="page--about--intro">

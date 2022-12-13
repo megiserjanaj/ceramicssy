@@ -1,14 +1,13 @@
 .contact--form {
-  margin: 0 auto;
+  margin: 2rem auto;
+  background-position: inherit;
+  box-shadow: inset 0 0 0 2000px rgba(15, 15, 15, 0.55);
 
   form {
-    margin: 4rem auto;
     padding: 3rem 2rem;
     max-width: 80%;
     width: 100%;
     border-radius: 10px;
-    background-color: rgb(229 229 229 / 50%);
-    box-shadow: 4px 4px 10px #cdcdcd;
 
     input,
     textarea {
@@ -18,8 +17,12 @@
       width: 100%;
       border: none;
       border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.75);
+      box-shadow: 4px 4px 10px #929292;
 
       &::placeholder {
+        color: #3a3a3a;
+        font-size: 0.875rem;
         font-family: "Poppins", sans-serif;
       }
 
@@ -44,9 +47,10 @@
       font-size: 1rem;
       font-weight: 600;
       color: #fff;
-      background-color: #060c3f;
-      border: 1px solid #060c3f;
+      background-color: #47a562;
+      border: 1px solid #47a562;
       border-radius: 5px;
+      box-shadow: 4px 4px 10px #929292;
       cursor: pointer;
 
       @media screen and (max-width: 500px) {
@@ -61,5 +65,9 @@
     @media screen and (max-width: 800px) {
       max-width: 70%;
     }
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 800px;
   }
 }

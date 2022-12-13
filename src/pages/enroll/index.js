@@ -1,9 +1,14 @@
 import "./styles.scss";
+import { useEffect } from "react";
 import Card from "../../components/card/Card";
 import { enroll } from "../../enrollCard";
 import image4 from "../../media/images/image4.jpg";
 
 const Enroll = () => {
+  useEffect(() => {
+    document.title = "Enroll";
+  }, []);
+
   return (
     <div className="page--enroll">
       <h2>Enroll now</h2>

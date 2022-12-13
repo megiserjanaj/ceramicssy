@@ -1,6 +1,7 @@
 import "./styles.scss";
 import { useState } from "react";
 import { db } from "../../firebase";
+import image12 from "../../media/images/image12.jpg";
 
 const Form = () => {
   const [fname, setFname] = useState();
@@ -75,8 +76,13 @@ const Form = () => {
   };
 
   return (
-    <div className="contact--form" id="contactForm">
-      <form onSubmit={sendContactForm} className="">
+    <div
+      className="contact--form"
+      style={{
+        backgroundImage: `url(${require("../../media/images/image12.jpg")})`,
+      }}
+    >
+      <form onSubmit={sendContactForm}>
         <input
           type="text"
           name="fname"

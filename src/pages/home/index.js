@@ -1,15 +1,24 @@
 import "./styles.scss";
-
-import headerVideo from "../../media/videos/production ID_4683409.mp4";
+import { useEffect } from "react";
+import headerVideo from "../../media/videos/broken_faces.mp4";
 import Video from "../../components/video/Video";
 import Card from "../../components/card/Card";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Ceramicssy";
+  }, []);
+
   return (
     <div className="page--home">
       <Video src={headerVideo} type="video/mp4" title="Ceramicssy" />
       <h1>Ceramicssy</h1>
-      <div className="section">
+      <div
+        className="section"
+        style={{
+          backgroundImage: `url(${require("../../media/images/image13.jpg")})`,
+        }}
+      >
         <div className="section--about">
           <Card
             title="About Us"

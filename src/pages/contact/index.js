@@ -1,7 +1,12 @@
 import "./styles.scss";
+import { useEffect } from "react";
 import Form from "../../components/form/Form";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Contact";
+  }, []);
+
   return (
     <div className="page--contact">
       <h2>Get in touch</h2>
