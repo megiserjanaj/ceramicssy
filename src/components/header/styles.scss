@@ -1,19 +1,4 @@
 .navbar {
-  nav {
-    ul {
-      li {
-        margin: 0 2rem;
-        list-style-type: none;
-
-        a {
-          color: #fff;
-          font-size: 1rem;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-
   &--icon {
     width: 50px;
     height: 50px;
@@ -28,11 +13,14 @@
   &--desktop {
     margin-right: 2rem;
     padding: 1rem;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     background: transparent;
+    z-index: 9999;
 
     nav {
       ul {
@@ -107,60 +95,6 @@
 
     &--icon {
       margin-left: 1rem;
-    }
-  }
-}
-
-.page--about,
-.page--gallery,
-.page--contact,
-.page--enroll {
-  .navbar {
-    ul {
-      li {
-        a {
-          position: relative;
-          color: #000;
-          &:hover,
-          &:active,
-          &:focus {
-            color: #cf1616;
-            &::after {
-              content: "";
-              margin: 0 auto;
-              position: absolute;
-              bottom: -0.5rem;
-              right: 0;
-              width: 65px;
-              border: 1px solid #000;
-              border-radius: 5px;
-            }
-          }
-          @media screen and (max-width: 500px) {
-            color: #fff;
-          }
-        }
-      }
-    }
-  }
-}
-
-.page--about {
-  .navbar {
-    ul li {
-      a {
-        @media screen and (max-width: 1200px) {
-          color: #fff;
-          &:hover,
-          &:active,
-          &:focus {
-            color: #fff;
-            &::after {
-              border: 1px solid #fff;
-            }
-          }
-        }
-      }
     }
   }
 }

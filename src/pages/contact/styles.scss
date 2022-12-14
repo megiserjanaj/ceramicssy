@@ -3,6 +3,10 @@
     &::after {
       border: 3px solid #37a757;
     }
+
+    @media screen and (max-width: 500px) {
+      margin-top: 4rem;
+    }
   }
 
   &--intro {
