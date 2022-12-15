@@ -25,7 +25,7 @@
       box-shadow: 4px 4px 10px #929292;
 
       &::placeholder {
-        color: #3a3a3a;
+        color: #575757;
         font-size: 0.875rem;
         font-family: "Poppins", sans-serif;
       }
@@ -62,12 +62,21 @@
       }
     }
 
+    .input-error {
+      color: #cf1616;
+    }
+
     p {
       font-size: 0.875rem;
     }
 
     @media screen and (max-width: 800px) {
+      margin: 0 auto;
       max-width: 70%;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-left: 2rem;
     }
   }
 

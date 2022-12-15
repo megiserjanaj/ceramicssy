@@ -1,7 +1,6 @@
 import "./styles.scss";
 import { useState } from "react";
 import { db } from "../../firebase";
-import image12 from "../../media/images/image12.jpg";
 
 const Form = () => {
   const [fname, setFname] = useState();
@@ -36,6 +35,35 @@ const Form = () => {
     setMessage("");
   };
 
+  const validateFName = (input) => {
+    var validName = String(input);
+    if (validName == "" || validName.match(/^\d+$/)) {
+      setFnameError("Please enter a valid first name!");
+      return input;
+    } else if (validName.match(/^[a-zA-Z]+ [a-zA-Z]+$/)) {
+      setFnameError("");
+    }
+  };
+
+  const validateLName = (input) => {
+    var validName = String(input);
+    if (validName == "" || validName.match(/^\d+$/)) {
+      setLnameError("Please enter a valid last name!");
+      return input;
+    } else if (validName.match(/^[a-zA-Z]+ [a-zA-Z]+$/)) {
+      setLnameError("");
+    }
+  };
+
+  const validateMessage = (input) => {
+    var validMessage = String(input);
+    if (validMessage == "") {
+      setMessageError("Please enter a message!");
+    } else {
+      setMessageError("");
+    }
+  };
+
   const validateEmail = (input) => {
     var validMail = String(input)
       .toLowerCase()
@@ -63,18 +91,6 @@ const Form = () => {
     return disabled;
   };
 
-  const checkIfEmpty = () => {
-    var empty = false;
-    if (fname && lname && email && message) {
-      empty = {};
-    } else {
-      empty = {
-        border: "1px solid #cf1616",
-      };
-    }
-    return empty;
-  };
-
   return (
     <div
       className="contact--form"
@@ -87,43 +103,39 @@ const Form = () => {
           type="text"
           name="fname"
           value={fname}
-          placeholder="First Name"
+          placeholder="First Name *"
           onChange={(e) => {
-            setFname(e.target.value);
+            setFname(validateFName(e.target.value));
           }}
-          style={checkIfEmpty()}
           className=""
           tabIndex={1}
           autoComplete="off"
         />
-        <p className="form--input--error">{fnameError}</p>
+        <p className="input-error">{fnameError}</p>
         <input
           type="text"
           name="lname"
           value={lname}
-          placeholder="Last Name"
+          placeholder="Last Name *"
           onChange={(e) => {
-            setLname(e.target.value);
+            setLname(validateLName(e.target.value));
           }}
-          style={checkIfEmpty()}
           tabIndex={2}
           autoComplete="off"
         />
-        <p className="form--input--error">{lnameError}</p>
+        <p className="input-error">{lnameError}</p>
         <input
           type="email"
           name="email"
           value={email}
-          placeholder="Email"
+          placeholder="Email *"
           onChange={(e) => {
             setEmail(validateEmail(e.target.value));
           }}
           tabIndex={3}
           autoComplete="off"
         />
-        <p className="form--input--error" style={{ color: "#cf1616" }}>
-          {emailError}
-        </p>
+        <p className="input-error">{emailError}</p>
         <textarea
           name="message"
           cols="30"
@@ -131,12 +143,12 @@ const Form = () => {
           value={message}
           placeholder="..."
           onChange={(e) => {
-            setMessage(e.target.value);
+            setMessage(validateMessage(e.target.value));
           }}
           tabIndex={4}
           autoComplete="off"
         ></textarea>
-        <p className="form--input--error">{messageError}</p>
+        <p className="input-error">{messageError}</p>
         <button
           type="submit"
           onClick={sendContactForm}
